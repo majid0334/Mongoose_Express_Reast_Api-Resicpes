@@ -4,6 +4,7 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 //Requrie home
 const homeWebRouter = require("./routers/web/home-web-router");
@@ -20,6 +21,12 @@ mongoose
   .then(() => console.log("MDB connected..."))
   .catch((err) => console.log(err));
 const app = express();
+
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 app.engine(
   "hbs",

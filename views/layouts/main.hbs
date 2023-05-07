@@ -10,8 +10,13 @@
 
      {{>header}}
  
-    {{{body}}}
+ <main>
+    {{#if error}}
+    <p class="error">{{error}}</p>
+    {{/if}}
 
+    {{{body}}}
+ </main>
    
   </body>
 </html>

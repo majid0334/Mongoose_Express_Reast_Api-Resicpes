@@ -1,0 +1,12 @@
+<form action="/ingredients/{{_id}}/edit" method="post">
+  <input type="text" name="name" placeholder="Name" value={{name}} />
+  <textarea
+    name="description"
+    placeholder="DEscribtion"
+  >{{decription}}</textarea>
+  <input type="submit" value="Save" />
+</form>
+
+<form action="/ingredients/{{_id}}/delete" method="post">
+  <input type="submit" value="Delete" />
+</form>
